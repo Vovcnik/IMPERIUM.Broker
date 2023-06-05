@@ -1,9 +1,102 @@
 //====================================================================================================
+.header {
+	// .header__container
 
-//====================================================================================================
+	&__container {
+	}
 
+	// .header__menu
+
+	&__menu {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("margin-top", 50, 10);
+	}
+}
+
+.menu {
+	// .menu__icon
+
+	&__icon {
+	}
+
+	// .menu__body
+
+	&__body {
+		display: flex;
+	}
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: center;
+		li {
+			padding: 0px 26px 0px 0px;
+		}
+	}
+
+	// .menu__link
+
+	&__link {
+		white-space: nowrap;
+		font-weight: 500;
+		line-height: 26px;
+		display: inline-block;
+		@media (max-width: 1016px) {
+			text-transform: uppercase;
+		}
+		position: relative;
+		&::before {
+			background: linear-gradient(4.19deg, #e6e9ec -17.59%, #afdbdf 115.3%);
+			position: absolute;
+			content: "";
+			height: 2px;
+			width: 0%;
+			right: 0;
+			transition: all 0.4s ease 0s;
+			bottom: -1px;
+		}
+		@media (min-width: $mobile) {
+			&:hover::before {
+				width: 100%;
+				left: 0;
+				background: linear-gradient(4.19deg, #2c90f7 -17.59%, #05c0cc 115.3%);
+			}
+		}
+	}
+}
+.logo-link {
+	display: block;
+	margin: 0px 15px 0px 0px;
+}
+.icon-menu {
+	// .icon-menu__btn
+
+	&__btn {
+		position: relative;
+		._button {
+			width: 103px;
+			height: 37px;
+			padding-left: rem(45);
+		}
+	}
+	&__link {
+		width: 500px;
+
+		&._icon-Profile:before {
+			position: absolute;
+			color: #fff;
+			font-size: 20px;
+			top: 8px;
+			left: 18px;
+		}
+	}
+}
 //Burger
-/*
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -20,17 +113,18 @@
 		&::after {
 			content: "";
 			transition: all 0.3s ease 0s;
-			right: 0;
+			left: 0;
 			position: absolute;
 			width: 100%;
 			height: rem(2);
-			background-color: #000;
+			background-color: #f8f5f5;
 		}
 		&::before {
 			top: 0;
 		}
 		&::after {
 			bottom: 0;
+			width: 85%;
 		}
 		span {
 			top: calc(50% - rem(1));
@@ -53,4 +147,3 @@
 		}
 	}
 }
-*/
