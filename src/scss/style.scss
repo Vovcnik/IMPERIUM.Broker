@@ -7,7 +7,7 @@
 //&display=swap - додати при підключенні через плагін
 
 // Підключити, якщо є локальні файли шрифтів
-//@import "fonts/fonts";
+@import "fonts/fonts";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
 // Підключення іконкових шрифтів ==============================================================================================================================================================================================================================================================================
 // Підключити, якщо є файл іконкового шрифту
@@ -34,7 +34,7 @@ $minWidth: 320;
 // Ширина полотна (макету)
 $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1220;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 30;
@@ -43,9 +43,7 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поїнти
-$pc: em(
-  $containerWidth
-); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
+$pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
 $tablet: em(991.98); // Планшети, деякі телефони в горизонтальному положенні
 $mobile: em(767.98); // Телефони L
 $mobileSmall: em(479.98); // Телефони S
@@ -63,7 +61,23 @@ $responsiveType: 1;
 
 // Стилі тега BODY ============================================================================================================================================================================================================================================================================================================================================================================================
 body {
-  font-weight: 400;
+  font-weight: 500;
+  background: #253142;
+  position: relative;
+  color: #fff;
+  .wrapper {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: url("@img/BG.png") 0 0 no-repeat;
+    background-clip: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
   // Скролл заблоковано
   .lock & {
     overflow: hidden;
@@ -110,16 +124,8 @@ body {
       @if ($maxWidthContainer>0) {
         padding: 0 rem(math.div($containerPadding, 2));
       } @else {
-        @include adaptiveValue(
-          "padding-left",
-          math.div($containerPadding, 2),
-          15
-        );
-        @include adaptiveValue(
-          "padding-right",
-          math.div($containerPadding, 2),
-          15
-        );
+        @include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
+        @include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
       }
     }
   }
