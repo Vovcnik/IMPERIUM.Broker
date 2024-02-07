@@ -10,8 +10,10 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease 0s;
-    &:hover {
-        background: linear-gradient(4.19deg, #aac3db -17.59%, #05c0cc 115.3%);
-        transition: all 0.3s ease 0s;
+    @media (min-width: $mobile) {
+        &:hover {
+            background: linear-gradient(4.19deg, #aac3db -17.59%, #05c0cc 115.3%);
+            transition: all 0.3s ease 0s;
+        }
     }
 }
