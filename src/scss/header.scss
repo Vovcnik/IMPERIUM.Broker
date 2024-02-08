@@ -35,15 +35,17 @@
 
 	&__list {
 		display: flex;
-		align-items: center;
+		align-items: flex-start;
 		flex-wrap: wrap;
 		justify-content: center;
+		padding: 10px;
 		@media (max-width: $mobile) {
 			flex-direction: column;
 			position: absolute;
-			width: 80%;
+			top: 150%;
+
 			height: auto;
-			top: -200%;
+			right: -200%;
 			justify-content: center;
 			transition: all 0.3s ease 0s;
 			background: rgba(216, 4, 250, 0.04);
@@ -54,8 +56,8 @@
 			border-radius: 20px;
 		}
 		.menu-open & {
-			top: 50%;
-			transition: all 0.3s ease 0s;
+			right: 10px;
+			transition: all 0.5s ease 0s;
 		}
 		li {
 			padding: 0px 26px 0px 0px;
@@ -89,6 +91,9 @@
 				left: 0;
 				background: linear-gradient(4.19deg, #2c90f7 -17.59%, #05c0cc 115.3%);
 			}
+		}
+		@media (max-width: $mobile) {
+			font-size: 18px;
 		}
 	}
 }
@@ -128,6 +133,8 @@
 		width: rem(30);
 		height: rem(18);
 		z-index: 5;
+		right: 10px;
+
 		@media (any-hover: none) {
 			cursor: default;
 		}
