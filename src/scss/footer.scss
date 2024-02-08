@@ -1,3 +1,108 @@
 //====================================================================================================
+.footer {
+    // .footer__container
+
+    &__container {
+    }
+}
+
+.footer-wrapper {
+    background-color: #171b2d;
+
+    @include adaptiveValue("padding-top", 75, 30);
+    @include adaptiveValue("padding-bottom", 75, 30);
+}
+.items {
+    // .items__footer
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 450px) {
+            flex-wrap: wrap;
+        }
+    }
+}
+
+.footer-item {
+    // .footer-item__last-block
+
+    &__last-block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex: 0 1 70%;
+        @media (max-width: 500px) {
+            flex-wrap: wrap;
+            flex: 0 1 100%;
+            justify-content: center;
+        }
+    }
+}
+
+.footer-item {
+    // .footer-item__logo
+
+    &__logo {
+        @media (max-width: 500px) {
+            flex-wrap: wrap;
+            flex: 0 1 100%;
+        }
+        img {
+            margin-bottom: 15px;
+        }
+        flex: 0 1 275px;
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    // .footer-item__menu
+
+    &__menu {
+        font-size: 15px;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            font-size: 15px;
+            flex-direction: column;
+            flex: 0 1 61px;
+        }
+        li {
+            white-space: nowrap;
+            padding-left: 15px;
+        }
+        @media (max-width: 850px) {
+            display: none;
+        }
+    }
+
+    // .footer-item__social
+
+    &__social {
+        text-align: end;
+        padding-left: 15px;
+        white-space: nowrap;
+        @media (max-width: 450px) {
+            padding-left: 0;
+        }
+    }
+}
+
+.items__social {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 15px;
+    a + a {
+        margin-left: 15px;
+    }
+    @media (max-width: 450px) {
+        justify-content: start;
+        padding: 15px 0px 0px 0px;
+    }
+}
 
 //====================================================================================================
