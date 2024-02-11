@@ -22,6 +22,16 @@
 }
 
 ._title {
-    font-weight: 600;
-    font-size: 25px;
+    font-weight: 700;
+    // font-size: calc(17px + 13 * (100vw / 1216));
+    // line-height: calc(100% + 15 * (100vw / 1216));
+    // @media (max-width: $tablet) {
+    //     font-size: calc(17px + (13 + 13 * 0.7) * ((100vw - 320px) / 1216));
+    // }
+    @include adaptive-font(40, 24);
+    line-height: 125%;
+}
+
+._text {
+    @include adaptive-font(15, 20);
 }

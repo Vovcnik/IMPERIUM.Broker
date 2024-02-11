@@ -68,15 +68,22 @@
             align-items: start;
             font-size: 15px;
             flex-direction: column;
-            height: 61px;
+            height: 80px;
         }
 
-        li {
+        .link-footer {
             white-space: nowrap;
             padding-left: 15px;
         }
         @media (max-width: 850px) {
             display: none;
+        }
+        .link-footer:hover {
+            background-image: -webkit-linear-gradient(0deg, #2c90f7 36%, #3bcad4 51%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            transition: background-image 0.3s ease 0s;
+            -webkit-text-fill-color: transparent;
         }
     }
 
@@ -103,6 +110,10 @@
     @media (max-width: 450px) {
         justify-content: start;
         padding: 15px 0px 0px 0px;
+    }
+    a:hover {
+        transform: scale(1.3);
+        transition: all 0.3s ease 0s;
     }
 }
 

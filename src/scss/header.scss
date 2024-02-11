@@ -27,7 +27,7 @@
 	&__body {
 		display: flex;
 		align-items: center;
-		@media (max-width: $mobile) {
+		@media (min-width: $tablet) {
 		}
 	}
 
@@ -37,7 +37,7 @@
 		display: flex;
 		align-items: flex-start;
 		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: end;
 		padding: 10px;
 		@media (max-width: $mobile) {
 			flex-direction: column;
@@ -133,7 +133,6 @@
 		width: rem(30);
 		height: rem(18);
 		z-index: 5;
-		right: 10px;
 
 		@media (any-hover: none) {
 			cursor: default;
