@@ -32,7 +32,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex: 0 1 70%;
+        flex: 0 1 73%;
         @media (max-width: 500px) {
             flex-wrap: wrap;
             flex: 0 1 100%;
@@ -68,8 +68,9 @@
             align-items: start;
             font-size: 15px;
             flex-direction: column;
-            flex: 0 1 61px;
+            height: 61px;
         }
+
         li {
             white-space: nowrap;
             padding-left: 15px;

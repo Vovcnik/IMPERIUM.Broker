@@ -1,3 +1,113 @@
-//====================================================================================================
+//===================================================================================================
+.invest {
+    position: relative;
+    // .invest__container
+
+    &__container {
+    }
+
+    // .invest__img
+
+    &__img::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 448px;
+        height: 500px;
+        background-image: url("../img/bicoin.png ");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        z-index: -1;
+        @media (max-width: 1250px) {
+            width: 300px;
+            height: 350px;
+        }
+        @media (max-width: 950px) {
+            width: 200px;
+            height: 250px;
+        }
+    }
+}
+
+.cripto-treider {
+    // .cripto-treider__inner
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        // @media (max-width: 980px) {
+        //     display: block;
+        // }
+    }
+
+    // .cripto-treider__item
+
+    &__item {
+    }
+
+    // .cripto-treider__title
+
+    &__title {
+        text-align: left;
+        margin-bottom: rem(15);
+        margin-bottom: 30px;
+        margin-top: 30px;
+        line-height: 125%;
+        max-width: 438px;
+    }
+
+    // .cripto-treider__text
+
+    &__text {
+        font-size: 12px;
+        margin-bottom: 57px;
+        max-width: 338px;
+    }
+
+    // .cripto-treider__btn
+
+    &__btn {
+        max-width: 212px;
+        box-sizing: border-box;
+    }
+}
+.item {
+    // .item__treider
+
+    &__treider {
+        flex: 0 1 400px;
+    }
+    img {
+    }
+}
+.img-men::before {
+    content: "";
+    position: absolute;
+    top: -80px;
+    right: -50px;
+    width: 985px;
+    height: 830px;
+    background-image: url("../img/men.png ");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+    @media (max-width: 1250px) {
+        width: 900px;
+    }
+    @media (max-width: 1050px) {
+        width: 800px;
+        height: 630px;
+    }
+    @media (max-width: 970px) {
+        width: 700px;
+        height: 530px;
+    }
+}
 
 //====================================================================================================
