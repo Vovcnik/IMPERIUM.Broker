@@ -48,7 +48,12 @@
 			right: -200%;
 			justify-content: center;
 			transition: all 0.3s ease 0s;
-			background: linear-gradient(4.19deg, #526475 -0.59%, #092f31 115.3%);
+			background: linear-gradient(
+				180deg,
+				rgb(56 145 179 / 31%) 2%,
+				rgb(37 49 66 / 41%) 47%,
+				rgb(0 212 255 / 16%) 91%
+			);
 			box-shadow: inset 0px 1px 2px rgba(21, 29, 32, 0.6);
 			backdrop-filter: blur(15px);
 			/* Note: backdrop-filter has minimal browser support */

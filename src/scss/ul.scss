@@ -32,6 +32,12 @@
     line-height: 125%;
 }
 
+._subtitle {
+    @include adaptive-font(26, 20);
+}
 ._text {
     @include adaptive-font(15, 20);
+}
+._subtext {
+    @include adaptive-font(15, 18);
 }
